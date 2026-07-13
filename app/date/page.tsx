@@ -31,7 +31,7 @@ function DateField({
         type="date"
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="mt-1 w-full rounded-lg border border-gray-300 bg-transparent px-3 py-2 outline-none transition-[border-color,box-shadow] duration-200 focus:border-gray-900 focus:ring-1 focus:ring-gray-900 dark:border-gray-700 dark:bg-gray-950 dark:text-gray-100 dark:focus:border-gray-300 dark:focus:ring-gray-300 [color-scheme:light] dark:[color-scheme:dark]"
+        className="mt-1 min-h-11 w-full rounded-lg border border-gray-300 bg-transparent px-3 py-2.5 text-base outline-none transition-[border-color,box-shadow] duration-200 focus:border-gray-900 focus:ring-1 focus:ring-gray-900 dark:border-gray-700 dark:bg-gray-950 dark:text-gray-100 dark:focus:border-gray-300 dark:focus:ring-gray-300 [color-scheme:light] dark:[color-scheme:dark]"
       />
     </label>
   );

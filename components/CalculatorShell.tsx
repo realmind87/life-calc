@@ -12,12 +12,14 @@ export default function CalculatorShell({
   children: ReactNode;
 }) {
   return (
-    <section className="mx-auto max-w-2xl px-4 py-8">
-      <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+    <section className="mx-auto max-w-2xl px-4 py-6 sm:py-8">
+      <h1 className="text-xl font-bold text-gray-900 sm:text-2xl dark:text-gray-100">
         {title}
       </h1>
-      <p className="mt-1 text-gray-500 dark:text-gray-400">{description}</p>
-      <div className="mt-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+      <p className="mt-1 text-sm text-gray-500 sm:text-base dark:text-gray-400">
+        {description}
+      </p>
+      <div className="mt-5 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:mt-6 sm:p-6 dark:border-gray-800 dark:bg-gray-900">
         {children}
       </div>
     </section>
@@ -43,14 +45,14 @@ export function NumberField({
       <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
         {label}
       </span>
-      <div className="mt-1 flex items-center overflow-hidden rounded-lg border border-gray-300 transition-[border-color,box-shadow] duration-200 focus-within:border-gray-900 focus-within:ring-1 focus-within:ring-gray-900 dark:border-gray-700 dark:bg-gray-950 dark:focus-within:border-gray-300 dark:focus-within:ring-gray-300">
+      <div className="mt-1 flex min-h-11 items-center overflow-hidden rounded-lg border border-gray-300 transition-[border-color,box-shadow] duration-200 focus-within:border-gray-900 focus-within:ring-1 focus-within:ring-gray-900 dark:border-gray-700 dark:bg-gray-950 dark:focus-within:border-gray-300 dark:focus-within:ring-gray-300">
         <input
           type="number"
           inputMode="decimal"
           value={value}
           placeholder={placeholder}
           onChange={(e) => onChange(e.target.value)}
-          className="w-full bg-transparent px-3 py-2 outline-none dark:text-gray-100 dark:placeholder:text-gray-500"
+          className="w-full bg-transparent px-3 py-2.5 text-base outline-none dark:text-gray-100 dark:placeholder:text-gray-500"
         />
         {suffix && (
           <span className="select-none px-3 text-sm text-gray-400">
@@ -74,10 +76,12 @@ export function Result({
   return (
     <div
       key={value}
-      className="mt-6 animate-fade-slide-in rounded-xl bg-gray-900 px-5 py-4 text-white dark:bg-gray-100 dark:text-gray-900"
+      className="mt-6 animate-fade-slide-in rounded-xl bg-gray-900 px-4 py-4 text-white sm:px-5 dark:bg-gray-100 dark:text-gray-900"
     >
       <div className="text-sm text-gray-300 dark:text-gray-500">{label}</div>
-      <div className="mt-1 text-3xl font-bold tabular-nums">{value}</div>
+      <div className="mt-1 text-2xl font-bold tabular-nums sm:text-3xl">
+        {value}
+      </div>
     </div>
   );
 }

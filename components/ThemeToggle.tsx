@@ -12,7 +12,7 @@ export default function ThemeToggle() {
       onClick={toggleTheme}
       aria-label={isDark ? "라이트 모드로 전환" : "다크 모드로 전환"}
       title={isDark ? "라이트 모드" : "다크 모드"}
-      className="ml-auto shrink-0 rounded-lg border border-gray-200 p-2 text-gray-600 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900 active:scale-95 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white"
+      className="shrink-0 rounded-lg border border-gray-200 p-2.5 text-gray-600 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900 active:scale-95 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white"
     >
       {isDark ? (
         // 다크일 때 → 태양 아이콘 (라이트로 바꾸기)
@@ -22,7 +22,7 @@ export default function ThemeToggle() {
           fill="none"
           stroke="currentColor"
           strokeWidth="1.8"
-          className="h-4 w-4"
+          className="h-5 w-5"
           aria-hidden
         >
           <circle cx="12" cy="12" r="4" />
@@ -39,7 +39,7 @@ export default function ThemeToggle() {
           fill="none"
           stroke="currentColor"
           strokeWidth="1.8"
-          className="h-4 w-4"
+          className="h-5 w-5"
           aria-hidden
         >
           <path

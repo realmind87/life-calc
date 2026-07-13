@@ -26,7 +26,7 @@ export default function ShareButton({ getUrl }: { getUrl: () => string }) {
   return (
     <button
       onClick={handleShare}
-      className={`mt-4 flex w-full items-center justify-center gap-2 rounded-lg border py-2 text-sm font-medium transition-all duration-200 active:scale-[0.98] ${
+      className={`mt-4 flex min-h-11 w-full items-center justify-center gap-2 rounded-lg border py-2.5 text-sm font-medium transition-all duration-200 active:scale-[0.98] ${
         copied
           ? "animate-copy-pop border-emerald-500 bg-emerald-500 text-white dark:border-emerald-400 dark:bg-emerald-400 dark:text-gray-900"
           : "border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800"
