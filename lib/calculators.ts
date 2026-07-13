@@ -34,6 +34,12 @@ export const calculators: Calculator[] = [
     description: "길이·무게·온도 같은 기본 단위를 변환해요.",
     emoji: "📏",
   },
+  {
+    slug: "bmi",
+    title: "BMI 계산기",
+    description: "키와 몸무게로 체질량지수(BMI)를 계산해요.",
+    emoji: "⚖️",
+  },
 ];
 
 export function getCalculator(slug: string): Calculator | undefined {
