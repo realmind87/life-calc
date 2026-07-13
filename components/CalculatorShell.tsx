@@ -13,9 +13,11 @@ export default function CalculatorShell({
 }) {
   return (
     <section className="mx-auto max-w-2xl px-4 py-8">
-      <h1 className="text-2xl font-bold text-gray-900">{title}</h1>
-      <p className="mt-1 text-gray-500">{description}</p>
-      <div className="mt-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+      <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+        {title}
+      </h1>
+      <p className="mt-1 text-gray-500 dark:text-gray-400">{description}</p>
+      <div className="mt-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900">
         {children}
       </div>
     </section>
@@ -38,18 +40,22 @@ export function NumberField({
 }) {
   return (
     <label className="block">
-      <span className="text-sm font-medium text-gray-700">{label}</span>
-      <div className="mt-1 flex items-center rounded-lg border border-gray-300 focus-within:border-gray-900 focus-within:ring-1 focus-within:ring-gray-900 overflow-hidden">
+      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+        {label}
+      </span>
+      <div className="mt-1 flex items-center overflow-hidden rounded-lg border border-gray-300 focus-within:border-gray-900 focus-within:ring-1 focus-within:ring-gray-900 dark:border-gray-700 dark:bg-gray-950 dark:focus-within:border-gray-300 dark:focus-within:ring-gray-300">
         <input
           type="number"
           inputMode="decimal"
           value={value}
           placeholder={placeholder}
           onChange={(e) => onChange(e.target.value)}
-          className="w-full px-3 py-2 outline-none"
+          className="w-full bg-transparent px-3 py-2 outline-none dark:text-gray-100 dark:placeholder:text-gray-500"
         />
         {suffix && (
-          <span className="px-3 text-sm text-gray-400 select-none">{suffix}</span>
+          <span className="select-none px-3 text-sm text-gray-400">
+            {suffix}
+          </span>
         )}
       </div>
     </label>
@@ -65,8 +71,8 @@ export function Result({
   value: string;
 }) {
   return (
-    <div className="mt-6 rounded-xl bg-gray-900 px-5 py-4 text-white">
-      <div className="text-sm text-gray-300">{label}</div>
+    <div className="mt-6 rounded-xl bg-gray-900 px-5 py-4 text-white dark:bg-gray-100 dark:text-gray-900">
+      <div className="text-sm text-gray-300 dark:text-gray-500">{label}</div>
       <div className="mt-1 text-3xl font-bold tabular-nums">{value}</div>
     </div>
   );

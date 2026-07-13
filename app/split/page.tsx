@@ -51,7 +51,7 @@ function SplitCalculator() {
         <>
           <Result label="1인당 금액" value={won(perPerson)} />
           {extra > 0 && (
-            <p className="mt-3 text-sm text-gray-500">
+            <p className="mt-3 text-sm text-gray-500 dark:text-gray-400">
               올림으로 걷으면 총 {won(collected)}, {won(extra)}이 남아요.
             </p>
           )}

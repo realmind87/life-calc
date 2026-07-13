@@ -26,7 +26,7 @@ export default function ShareButton({ getUrl }: { getUrl: () => string }) {
   return (
     <button
       onClick={handleShare}
-      className="mt-4 w-full rounded-lg border border-gray-300 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors"
+      className="mt-4 w-full rounded-lg border border-gray-300 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800"
     >
       {copied ? "링크가 복사됐어요" : "이 계산 링크 복사"}
     </button>

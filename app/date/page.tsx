@@ -24,12 +24,14 @@ function DateField({
 }) {
   return (
     <label className="block">
-      <span className="text-sm font-medium text-gray-700">{label}</span>
+      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+        {label}
+      </span>
       <input
         type="date"
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 outline-none focus:border-gray-900 focus:ring-1 focus:ring-gray-900"
+        className="mt-1 w-full rounded-lg border border-gray-300 bg-transparent px-3 py-2 outline-none focus:border-gray-900 focus:ring-1 focus:ring-gray-900 dark:border-gray-700 dark:bg-gray-950 dark:text-gray-100 dark:focus:border-gray-300 dark:focus:ring-gray-300 [color-scheme:light] dark:[color-scheme:dark]"
       />
     </label>
   );

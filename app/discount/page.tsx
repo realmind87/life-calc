@@ -60,7 +60,7 @@ function DiscountCalculator() {
       {p > 0 && (
         <>
           <Result label="최종 가격" value={won(final)} />
-          <p className="mt-3 text-sm text-gray-500">
+          <p className="mt-3 text-sm text-gray-500 dark:text-gray-400">
             {won(saved)} 아꼈어요 (원가의 {Math.round((saved / p) * 100)}%)
           </p>
           <ShareButton getUrl={buildShareUrl} />

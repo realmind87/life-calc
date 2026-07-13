@@ -2,7 +2,5 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background: #f9fafb;
-  color: #111827;
-}
+/* 배경/글자색은 layout의 body 클래스가 담당합니다.
+   여기에 두면 Tailwind dark:와 중복되므로 비워 둡니다. */
