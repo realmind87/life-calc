@@ -65,7 +65,7 @@ export default function UnitPage() {
           <button
             key={c}
             onClick={() => changeCategory(c)}
-            className={`rounded-full px-4 py-1.5 text-sm transition-colors ${
+            className={`rounded-full px-4 py-1.5 text-sm transition-all duration-200 active:scale-95 ${
               category === c
                 ? "bg-gray-900 text-white dark:bg-gray-100 dark:text-gray-900"
                 : "bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
@@ -110,7 +110,7 @@ function UnitSelect({
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="mt-1 w-full rounded-lg border border-gray-300 bg-transparent px-3 py-2 outline-none focus:border-gray-900 focus:ring-1 focus:ring-gray-900 dark:border-gray-700 dark:bg-gray-950 dark:text-gray-100 dark:focus:border-gray-300 dark:focus:ring-gray-300"
+        className="mt-1 w-full rounded-lg border border-gray-300 bg-transparent px-3 py-2 outline-none transition-[border-color,box-shadow] duration-200 focus:border-gray-900 focus:ring-1 focus:ring-gray-900 dark:border-gray-700 dark:bg-gray-950 dark:text-gray-100 dark:focus:border-gray-300 dark:focus:ring-gray-300"
       >
         {options.map((o) => (
           <option key={o} value={o}>

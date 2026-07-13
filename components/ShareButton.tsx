@@ -20,15 +20,40 @@ export default function ShareButton({ getUrl }: { getUrl: () => string }) {
       // 그래도 주소창에는 링크가 반영되어 있으니 복사됨으로 처리합니다.
     }
     setCopied(true);
-    setTimeout(() => setCopied(false), 1500);
+    setTimeout(() => setCopied(false), 2000);
   }
 
   return (
     <button
       onClick={handleShare}
-      className="mt-4 w-full rounded-lg border border-gray-300 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800"
+      className={`mt-4 flex w-full items-center justify-center gap-2 rounded-lg border py-2 text-sm font-medium transition-all duration-200 active:scale-[0.98] ${
+        copied
+          ? "animate-copy-pop border-emerald-500 bg-emerald-500 text-white dark:border-emerald-400 dark:bg-emerald-400 dark:text-gray-900"
+          : "border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800"
+      }`}
     >
-      {copied ? "링크가 복사됐어요" : "이 계산 링크 복사"}
+      {copied ? (
+        <>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.2"
+            className="h-4 w-4"
+            aria-hidden
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M5 13l4 4L19 7"
+            />
+          </svg>
+          링크가 복사됐어요
+        </>
+      ) : (
+        "이 계산 링크 복사"
+      )}
     </button>
   );
 }

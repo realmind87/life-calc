@@ -43,7 +43,7 @@ export function NumberField({
       <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
         {label}
       </span>
-      <div className="mt-1 flex items-center overflow-hidden rounded-lg border border-gray-300 focus-within:border-gray-900 focus-within:ring-1 focus-within:ring-gray-900 dark:border-gray-700 dark:bg-gray-950 dark:focus-within:border-gray-300 dark:focus-within:ring-gray-300">
+      <div className="mt-1 flex items-center overflow-hidden rounded-lg border border-gray-300 transition-[border-color,box-shadow] duration-200 focus-within:border-gray-900 focus-within:ring-1 focus-within:ring-gray-900 dark:border-gray-700 dark:bg-gray-950 dark:focus-within:border-gray-300 dark:focus-within:ring-gray-300">
         <input
           type="number"
           inputMode="decimal"
@@ -63,6 +63,7 @@ export function NumberField({
 }
 
 // 결과를 강조해서 보여주는 박스.
+// key={value}로 값이 바뀔 때마다 등장 애니메이션이 다시 재생됩니다.
 export function Result({
   label,
   value,
@@ -71,7 +72,10 @@ export function Result({
   value: string;
 }) {
   return (
-    <div className="mt-6 rounded-xl bg-gray-900 px-5 py-4 text-white dark:bg-gray-100 dark:text-gray-900">
+    <div
+      key={value}
+      className="mt-6 animate-fade-slide-in rounded-xl bg-gray-900 px-5 py-4 text-white dark:bg-gray-100 dark:text-gray-900"
+    >
       <div className="text-sm text-gray-300 dark:text-gray-500">{label}</div>
       <div className="mt-1 text-3xl font-bold tabular-nums">{value}</div>
     </div>
