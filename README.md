@@ -3,6 +3,28 @@
 자주 쓰는 계산기를 한곳에 모은 Next.js 웹 앱입니다.  
 계산 상태를 URL로 공유할 수 있고, 다크모드·마이크로 인터랙션·반응형 UI를 지원합니다.
 
+## 라이브
+
+- **프로덕션:** https://life-calc-coral.vercel.app
+- **저장소:** https://github.com/realmind87/life-calc
+
+### 페이지 URL
+
+| 페이지 | URL |
+|--------|-----|
+| 홈 | https://life-calc-coral.vercel.app |
+| 할인 계산기 | https://life-calc-coral.vercel.app/discount |
+| 더치페이 계산기 | https://life-calc-coral.vercel.app/split |
+| 날짜 계산기 | https://life-calc-coral.vercel.app/date |
+| 단위 변환기 | https://life-calc-coral.vercel.app/unit |
+| BMI 계산기 | https://life-calc-coral.vercel.app/bmi |
+
+### 공유 URL 예시
+
+- BMI: https://life-calc-coral.vercel.app/bmi?height=170&weight=65
+- 할인: https://life-calc-coral.vercel.app/discount?price=10000&rate1=30
+- 더치페이: https://life-calc-coral.vercel.app/split?total=48000&people=4
+
 ## 기능
 
 ### 계산기
@@ -94,4 +116,5 @@ tailwind.config.ts    # darkMode, 커스텀 animation
 
 ## 배포
 
-Vercel에 GitHub 저장소를 연결하면 `main` push 시 자동 배포됩니다.
+Vercel에 GitHub 저장소를 연결하면 `main` push 시 자동 배포됩니다.  
+현재 프로덕션 주소: https://life-calc-coral.vercel.app
